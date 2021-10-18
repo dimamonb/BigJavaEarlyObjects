@@ -7,8 +7,12 @@ public class CashRegisterTester
 {
    public static void main(String[] args)
    {
+
       final Coin DOLLAR = new Coin(1.0, "Dollar");
       final Coin QUARTER = new Coin(0.25, "Quarter");
+      final Coin DIME = new Coin(0.1, "Dime");
+      final Coin NICKEL = new Coin(0.05, "Nickel");
+      final Coin PENNY = new Coin(0.01, "Penny");
 
       CashRegister register = new CashRegister();
 
@@ -17,7 +21,7 @@ public class CashRegisterTester
       register.receivePayment(3, DOLLAR);
       register.receivePayment(2, QUARTER);
 
-      double change = register.giveChange();
+      int change = register.giveChange(PENNY);
 
       System.out.println(change);      
       System.out.println("Expected: 0.15");          
