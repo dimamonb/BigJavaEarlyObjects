@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Reader {
+    private int counter = 0;
     private Scanner scanner;
     private ArrayList<String> buffer;
 
@@ -14,17 +15,21 @@ public class Reader {
 
     // Checks whether there is another element
     public boolean hasMoreElements() {
-        return !buffer.isEmpty();
+        System.out.println(counter);
+        return counter != 0;
     }
 
     // Yields the current element without consuming it
     public String getCurrent() {
-        return buffer.remove(buffer.size()-1);
+        String current = buffer.get(counter-1);
+        counter--;
+        return current;
     }
 
     // Consumes the current element
     public void next() {
         String value = scanner.next();
         buffer.add(value);
+        counter = buffer.size();
     }
 }
