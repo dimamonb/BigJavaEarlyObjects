@@ -1,6 +1,7 @@
 package ch09;
 
 import ch09.pe_05.NumericQuestion;
+import ch09.pe_06.FillInQuestion;
 
 public class QuestionDemo4 {
     public static void main(String[] args) {
