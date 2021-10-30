@@ -12,18 +12,22 @@ public class Question {
     }
 
     public void setText(String questionText) {
+
         this.text = questionText;
     }
 
     public void setAnswer(String correctResponse) {
+
         this.answer = correctResponse;
     }
 
     public boolean checkAnswer(String response) {
-        return response.equals(answer);
+
+        return response.trim().equalsIgnoreCase(answer.trim());
     }
 
     public void display() {
+
         System.out.println(text);
     }
 
