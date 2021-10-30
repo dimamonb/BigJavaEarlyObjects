@@ -8,6 +8,10 @@ public class BasicAccount2 extends BankAccount{
     }
     @Override
     public void withdraw(double amount) {
+        double balance = getBalance();
+        if(balance >= amount){
+            amount += 30;
+        }
         super.withdraw(amount);
     }
 }
