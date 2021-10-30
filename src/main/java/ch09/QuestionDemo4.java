@@ -2,9 +2,7 @@ package ch09;
 
 import ch09.pe_05.NumericQuestion;
 
-import java.util.Scanner;
-
-public class QuestionDemo3 {
+public class QuestionDemo4 {
     public static void main(String[] args) {
         Question first = new Question();
         first.setText("What was the original name of the Java language?");
@@ -17,16 +15,14 @@ public class QuestionDemo3 {
         second.addChoice("Denmark", false);
         second.addChoice("United States", false);
 
-        presentQuestion(first);
-        presentQuestion(second);
+
+        NumericQuestion third = new NumericQuestion();
+        third.setText("I don`t know what to ask here:");
+        third.setNumericAnswer(25.36);
+
+        first.presentQuestion();
         second.presentQuestion();
+        third.presentQuestion();
     }
 
-    public static void presentQuestion(Question q) {
-        q.display();
-        System.out.print("Your answer: ");
-        Scanner in = new Scanner(System.in);
-        String response = in.nextLine();
-        System.out.println(q.checkAnswer(response));
-    }
 }
