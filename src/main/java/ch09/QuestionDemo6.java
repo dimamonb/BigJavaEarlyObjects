@@ -2,8 +2,9 @@ package ch09;
 
 import ch09.pe_05.NumericQuestion;
 import ch09.pe_06.FillInQuestion;
+import ch09.pe_08.AnyCorrectChoiceQuestion;
 
-public class QuestionDemo5 {
+public class QuestionDemo6 {
     public static void main(String[] args) {
         Question first = new Question();
         first.setText("What was the original name of the Java language?");
@@ -25,10 +26,18 @@ public class QuestionDemo5 {
         forth.setText("The inventor of Java was");
         forth.setAnswer("James Gosling");
 
-        first.presentQuestion();
+        AnyCorrectChoiceQuestion fifth = new AnyCorrectChoiceQuestion();
+        fifth.setText("Which of the following reserved words in java");
+        fifth.addChoice("break", true);
+        fifth.addChoice("start", false);
+        fifth.addChoice("milk", false);
+        fifth.addChoice("static", true);
+        fifth.addChoice("long", true);
+
         second.presentQuestion();
         third.presentQuestion();
         forth.presentQuestion();
+        fifth.presentQuestion();
     }
 
 }
