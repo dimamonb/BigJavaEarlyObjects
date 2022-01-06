@@ -17,6 +17,7 @@ public class ChoiceQuestion extends Question {
         }
     }
 
+    @Override
     public void display() {
         // Display the question text
         super.display();
