@@ -1,0 +1,7 @@
+
+Open a file with the name hello.txt.
+Store the message "Hello, World!" in the file.
+Close the file.
+Open the same file again.
+Read the message into a string variable and print it.
+
